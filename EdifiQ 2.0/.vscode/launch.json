@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-EdifiqApplication<edifiq-backend>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "EdifiQ.EdifiqApplication",
+            "projectName": "edifiq-backend",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

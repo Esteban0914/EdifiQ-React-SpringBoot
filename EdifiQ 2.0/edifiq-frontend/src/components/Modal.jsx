@@ -1,0 +1,4 @@
+export default function Modal({ open, title, onClose, children, onSubmit, loading, submitLabel='Guardar' }) {
+  if (!open) return null
+  return <dialog open className="modal-backdrop" aria-label={title}><div className="modal-card"><div className="modal-head"><div><span className="modal-kicker">Edifiq / Formulario</span><h2>{title}</h2><p>Completa los datos requeridos.</p></div><button type="button" className="icon-button" onClick={onClose} aria-label="Cerrar formulario">×</button></div><form onSubmit={onSubmit}><div className="required-hint"><b>*</b> Campos obligatorios</div>{children}<div className="modal-actions"><button type="button" className="button ghost" onClick={onClose}>Cancelar</button><button type="submit" className="button primary" disabled={loading}>{loading ? 'Guardando...' : submitLabel}</button></div></form></div></dialog>
+}
